@@ -19,7 +19,7 @@ function SignUpForm() {
                          {label: 'Password:', inputType: "password"}]} 
                          
                 handleSubmit={handleSubmit} 
-                submitText='SignUps'
+                submitText='SignUp'
                 />
         </>
     );
