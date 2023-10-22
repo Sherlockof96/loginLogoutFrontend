@@ -13,8 +13,8 @@ function SignUpForm() {
         event.preventDefault();
         // Connect to server to submit user sign up data
         const data = {
-            "username": formData['Email:'],
-            "email": formData['Username:'],
+            "username": formData['Username:'],
+            "email": formData['Email:'],
             "pass": formData['Password:'],
             "id": 0
         }
