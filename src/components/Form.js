@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Form(
-    { labels, handleSubmit, submitText, 
+    { labels, handleSubmit, submitText,
         labelClass="w-full flex justify-center dark:text-light p-2", 
         formClass="flex-col items-center justify-center w-full p-12",
         buttonClass = "relative group text-dark w-full flex justify-center p-5",
@@ -25,7 +25,7 @@ function Form(
                     <br />
                 </div>
             ))}
-            <button type="submit" className={`${buttonClass}`}><span className={`${buttonSpanClass}`}>{submitText}</span></button>
+            <button onClick={submitClick} type="submit" className={`${buttonClass}`}><span className={`${buttonSpanClass}`}>{submitText}</span></button>
         </form>
     );
 }

@@ -2,13 +2,30 @@ import React, { useState } from 'react';
 import Form from './Form';
 
 function SignUpForm() {
-    const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         // Connect to server to submit user sign up data
+        const data = {
+            "username": formData['Username'],
+            "email": formData['Email'],
+            "pass": formData['Password'],
+            "id": 0
+        }
+        console.log(data);
+
+        const response = await fetch('https://loginlogoutbackend.azurewebsites.net/signup', 
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        });
+
+        const json = await response.json();
+        console.log(json);
+
     };
 
     return (
