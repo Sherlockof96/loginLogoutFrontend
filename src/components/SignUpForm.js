@@ -13,13 +13,11 @@ function SignUpForm() {
         event.preventDefault();
         // Connect to server to submit user sign up data
         const data = {
-            "username": formData['Username:'],
-            "email": formData['Email:'],
+            "username": formData['Email:'],
+            "email": formData['Username:'],
             "pass": formData['Password:'],
             "id": 0
         }
-
-        console.log(data);
 
         const response = await fetch('https://loginlogoutbackend.azurewebsites.net/signup', 
         {

@@ -21,8 +21,6 @@ function LoginForm() {
             "id": -1
         }
 
-        console.log(data);
-
         const response = await fetch('https://loginlogoutbackend.azurewebsites.net/login', 
         {
             method: 'POST',
@@ -33,8 +31,6 @@ function LoginForm() {
         });
 
         const json = await response.json();
-
-        console.log(json);
         
         if (json > 0) {
             // Add logic to redirect to dashboard here
