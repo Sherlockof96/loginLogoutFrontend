@@ -36,11 +36,6 @@ function SignUpForm() {
             console.log('Sign up successful');
             window.location.href = 'https://login.kavishdoshi.com/login';
         }
-        
-        // if (json['status'] === 'success') {
-        //     console.log('Sign up successful');
-        //     window.location.href = 'https://kavishdoshi.com';
-        // }
 
     };
 
