@@ -19,7 +19,7 @@ export function middleware(req: NextRequest, res: NextResponse) {
         response.cookies.set('x-go-to', req.headers.get('x-redirect-url'))
     }
     else {
-        Cookie.set('x-redirect-url', "https://kavishdoshi.com")
+        Cookie.set('x-go-to', "https://kavishdoshi.com")
         response.cookies.set('x-go-to', "https://kavishdoshi.com")
     }
     
