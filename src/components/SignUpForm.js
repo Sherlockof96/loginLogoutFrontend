@@ -1,5 +1,7 @@
 import React, { use, useState } from 'react';
 import Form from './Form';
+import Cookie from 'js-cookie';
+import { NextResponse } from 'next/server';
 
 function SignUpForm() {
     const [formData, setFormData] = useState([]);
@@ -31,8 +33,10 @@ function SignUpForm() {
         const json = await response.json();
 
         if(json > 0) {
+            const cookieData = Cookie.get('x-go-to');
             console.log('Sign up successful');
-            window.location.href = 'https://login.kavishdoshi.com/login';
+            Cookie.set('x-custom-auth-header', 'isAuthed', {expires: 1});
+            window.location.href = cookieData;
         }
 
     };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Form from './Form';
+import Cookie from 'js-cookie';
 
 function LoginForm() {
     const [formData, setFormData] = useState([]);
@@ -29,13 +30,19 @@ function LoginForm() {
             },
             body: JSON.stringify(data),
         });
+        
+        console.log(JSON.stringify(data));
 
         const json = await response.json();
+        console.log(json);
         
         if (json > 0) {
             // Add logic to redirect to dashboard here
             console.log('Login successful');
-            window.location.href = 'https://kavishdoshi.com';
+            const cookieData = Cookie.get('x-go-to');
+            console.log('Sign up successful');
+            Cookie.set('x-custom-auth-header', 'isAuthed', {expires: 1});
+            window.location.href = cookieData;
         } else {
             // Add logic to display error message here
             console.log('Login failed');
