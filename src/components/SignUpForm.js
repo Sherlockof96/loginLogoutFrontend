@@ -19,6 +19,8 @@ function SignUpForm() {
             "id": 0
         }
 
+        console.log(data);
+
         const response = await fetch('https://loginlogoutbackend.azurewebsites.net/signup', 
         {
             method: 'POST',

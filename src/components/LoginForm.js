@@ -21,6 +21,8 @@ function LoginForm() {
             "id": -1
         }
 
+        console.log(data);
+
         const response = await fetch('https://loginlogoutbackend.azurewebsites.net/login', 
         {
             method: 'POST',
@@ -32,8 +34,9 @@ function LoginForm() {
 
         const json = await response.json();
 
+        console.log(json);
         
-        if (json != -1) {
+        if (json > 0) {
             // Add logic to redirect to dashboard here
             console.log('Login successful');
             window.location.href = 'https://kavishdoshi.com';
