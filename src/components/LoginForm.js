@@ -5,6 +5,13 @@ function LoginForm() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    const handleChange = (event) => {
+        setFormData({
+            ...formData,
+            [event.target.name]: event.target.value,
+        });
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(`Username: ${username}, Password: ${password}`);
@@ -28,6 +35,7 @@ function LoginForm() {
                          
                 handleSubmit={handleSubmit} 
                 submitText='Submit'
+                handleChange={handleChange}
                 />
     );
 }

@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import Form from './Form';
 
 function SignUpForm() {
-
+    const [formData, setFormData] = useState([]);
+    const handleChange = (event) => {
+        setFormData({
+            ...formData,
+            [event.target.name]: event.target.value,
+        });
+    };
     const handleSubmit = async (event) => {
         event.preventDefault();
         // Connect to server to submit user sign up data
         const data = {
-            "username": formData['Username'],
-            "email": formData['Email'],
-            "pass": formData['Password'],
+            "username": formData['Username:'],
+            "email": formData['Email:'],
+            "pass": formData['Password:'],
             "id": 0
         }
-        console.log(data);
 
         const response = await fetch('https://loginlogoutbackend.azurewebsites.net/signup', 
         {
@@ -37,6 +42,7 @@ function SignUpForm() {
                          
                 handleSubmit={handleSubmit} 
                 submitText='SignUp'
+                handleChange={handleChange}
                 />
         </>
     );
