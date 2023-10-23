@@ -39,10 +39,11 @@ function LoginForm() {
         if (json > 0) {
             // Add logic to redirect to dashboard here
             console.log('Login successful');
-            const cookieData = Cookie.get('x-go-to');
-            console.log('Sign up successful');
-            Cookie.set('x-custom-auth-header', 'isAuthed', {expires: 1});
-            window.location.href = cookieData;
+            window.location.href = "https://kavishdoshi.com";
+            // const cookieData = Cookie.get('x-go-to');
+            // console.log('Sign up successful');
+            // Cookie.set('x-custom-auth-header', 'isAuthed', {expires: 1});
+            // window.location.href = cookieData;
         } else {
             // Add logic to display error message here
             console.log('Login failed');
