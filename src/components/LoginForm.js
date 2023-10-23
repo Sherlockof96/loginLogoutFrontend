@@ -41,11 +41,7 @@ function LoginForm() {
             console.log('Login successful');
             Cookie.set('Auth', 'Allowed', { expires: 1 , domain: '.kavishdoshi.com'})
 
-            if (Cookie.get('redirectURL'))
-            {
-                window.location.href = Cookie.get('redirectURL');
-            }
-            window.location.href = "https://kavishdoshi.com";
+            window.location.href = Cookie.get('redirectURL') ? Cookie.get('redirectURL') : "https://kavishdoshi.com";
         } else {
             // Add logic to display error message here
             console.log('Login failed');
