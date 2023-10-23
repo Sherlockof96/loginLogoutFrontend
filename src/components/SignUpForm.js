@@ -1,7 +1,6 @@
 import React, { use, useState } from 'react';
 import Form from './Form';
 import Cookie from 'js-cookie';
-import { NextResponse } from 'next/server';
 
 function SignUpForm() {
     const [formData, setFormData] = useState([]);
@@ -35,15 +34,13 @@ function SignUpForm() {
         if(json > 0) {
 
             console.log('Sign up successful');
-            window.location.href = "https://kavishdoshi.com";
+            Cookie.set('Auth', 'Allowed', { expires: 1 , domain: '.kavishdoshi.com'})
 
-            // works in local host
-            // if (!Cookie.get('x-go-to')) {
-            //     window.location.href = "https://kavishdoshi.com";
-            // }
-            // const cookieData = Cookie.get('x-go-to');
-            // Cookie.set('x-custom-auth-header', 'isAuthed', {expires: 1});
-            // window.location.href = cookieData == undefined ? "https://kavishdoshi.com" : cookieData;
+            if (Cookie.get('redirectURL'))
+            {
+                window.location.href = Cookie.get('redirectURL');
+            }
+            window.location.href = "https://kavishdoshi.com";
         }
 
     };
