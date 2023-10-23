@@ -30,11 +30,8 @@ function LoginForm() {
             },
             body: JSON.stringify(data),
         });
-        
-        console.log(JSON.stringify(data));
 
         const json = await response.json();
-        console.log(json);
         
         if (json > 0) {
             // Add logic to redirect to dashboard here

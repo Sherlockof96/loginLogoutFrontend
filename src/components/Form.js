@@ -14,7 +14,7 @@ function Form(
             {labels.map((label) => (
                 <div key={label.label} className={`${labelClass}`}>
                     <label className='flex justify-center'>{label.label}</label>
-                    <input type={label.inputType} id={label.label} name={label.label} onChange={handleChange} />
+                    <input className='dark:text-dark' type={label.inputType} id={label.label} name={label.label} onChange={handleChange} />
                     <br />
                 </div>
             ))}
