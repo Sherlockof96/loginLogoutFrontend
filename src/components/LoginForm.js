@@ -17,7 +17,7 @@ function LoginForm() {
         // Add logic to submit form data to backend here
         const data = {
             "username": formData['Username:'],
-            "email": formData['Email:'],
+            "email": "123@gmail",
             "pass": formData['Password:'],
             "id": -1
         }
