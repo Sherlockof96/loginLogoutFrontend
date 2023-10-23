@@ -33,6 +33,9 @@ function SignUpForm() {
         const json = await response.json();
 
         if(json > 0) {
+            if (Cookie.get('x-go-to') == undefined) {
+                window.location.href = "https://kavishdoshi.com";
+            }
             const cookieData = Cookie.get('x-go-to');
             console.log('Sign up successful');
             Cookie.set('x-custom-auth-header', 'isAuthed', {expires: 1});
