@@ -33,7 +33,7 @@ function SignUpForm() {
         const json = await response.json();
 
         if(json > 0) {
-            if (Cookie.get('x-go-to') == undefined) {
+            if (!Cookie.get('x-go-to')) {
                 window.location.href = "https://kavishdoshi.com";
             }
             const cookieData = Cookie.get('x-go-to');
