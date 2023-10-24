@@ -41,7 +41,6 @@ function LoginForm() {
             // Add logic to redirect to dashboard here
             console.log('Login successful');
             Cookie.set("UserId", userId, { expires: 1 , domain: '.kavishdoshi.com'})
-            Cookie.set("SessionIdLogin", sessionId, { expires: 1 , domain: '.kavishdoshi.com'})
             Cookie.set('Auth', 'Allowed', { expires: 1 , domain: '.kavishdoshi.com'})
 
             window.location.href = Cookie.get('redirectURL') ? Cookie.get('redirectURL') : "https://kavishdoshi.com";
