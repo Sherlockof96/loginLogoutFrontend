@@ -16,16 +16,14 @@ function LoginForm() {
         event.preventDefault();
         // Add logic to submit form data to backend here
         let urlAddress = "https://kavishdoshi.com"
-        if (Cookie.get('redirectURL')!= undefined) {
-            urlAddress = Cookie.get('redirectURL')
-        }
+        
         const data = {
             "username": formData['Username:'],
             "email": "123@gmail",
             "pass": formData['Password:'],
             "id": -1,
             "rol": "user",
-            "urlAddress": Cookie.get('redirectURL') ? Cookie.get('redirectURL') : "https://kavishdoshi.com";
+            "urlAddress": Cookie.get('redirectURL') ? Cookie.get('redirectURL') : "https://kavishdoshi.com"
         }
 
         const response = await fetch('https://loginlogoutbackend.azurewebsites.net/login', 
