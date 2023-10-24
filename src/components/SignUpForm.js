@@ -32,7 +32,6 @@ function SignUpForm() {
         const sessionId = await response.text();
 
         if(sessionId != "invalid") {
-            Cookie.set('SignUpSessionId', sessionId, { expires: 1 , domain: '.kavishdoshi.com'})
             window.location.href = "https://login.kavishdoshi.com/login";
         }
 
