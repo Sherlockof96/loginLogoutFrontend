@@ -35,11 +35,12 @@ function LoginForm() {
             body: JSON.stringify(data),
         });
 
-        const sessionId = await response.text();
+        const userId = await response.text();
         
-        if (sessionId != "invalid") {
+        if (userId != "invalid") {
             // Add logic to redirect to dashboard here
             console.log('Login successful');
+            Cookie.set("UserId", userId, { expires: 1 , domain: '.kavishdoshi.com'})
             Cookie.set("SessionIdLogin", sessionId, { expires: 1 , domain: '.kavishdoshi.com'})
             Cookie.set('Auth', 'Allowed', { expires: 1 , domain: '.kavishdoshi.com'})
 
