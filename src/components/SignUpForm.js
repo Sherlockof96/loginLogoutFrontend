@@ -29,14 +29,11 @@ function SignUpForm() {
             body: JSON.stringify(data),
         });
 
-        const json = await response.json();
+        const sessionId = await response.text();
 
-        if(json > 0) {
-
-            console.log('Sign up successful');
-            Cookie.set('Auth', 'Allowed', { expires: 1 , domain: '.kavishdoshi.com'})
-
-            window.location.href = Cookie.get('redirectURL') ? Cookie.get('redirectURL') : "https://kavishdoshi.com";
+        if(sessionId != "invalid") {
+            Cookie.set('SignUpSessionId', sessionId, { expires: 1 , domain: '.kavishdoshi.com'})
+            window.location.href = "https://login.kavishdoshi.com/login";
         }
 
     };

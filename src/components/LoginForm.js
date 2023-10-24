@@ -31,11 +31,12 @@ function LoginForm() {
             body: JSON.stringify(data),
         });
 
-        const json = await response.json();
+        const sessionId = await response.text();
         
-        if (json > 0) {
+        if (sessionId != "invalid") {
             // Add logic to redirect to dashboard here
             console.log('Login successful');
+            Cookie.set("SessionIdLogin", sessionId, { expires: 1 , domain: '.kavishdoshi.com'})
             Cookie.set('Auth', 'Allowed', { expires: 1 , domain: '.kavishdoshi.com'})
 
             window.location.href = Cookie.get('redirectURL') ? Cookie.get('redirectURL') : "https://kavishdoshi.com";
