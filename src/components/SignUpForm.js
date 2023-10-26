@@ -17,7 +17,7 @@ function SignUpForm() {
             "username": formData['Username:'],
             "email": formData['Email:'],
             "pass": formData['Password:'],
-            "id": 0
+            "userhash": 0
         }
 
         const response = await fetch('https://loginlogoutbackend.azurewebsites.net/signup', 

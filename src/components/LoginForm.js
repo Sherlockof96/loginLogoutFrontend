@@ -21,7 +21,7 @@ function LoginForm() {
             "username": formData['Username:'],
             "email": "123@gmail",
             "pass": formData['Password:'],
-            "id": -1,
+            "userhash": -1,
             "rol": "user",
             "urlAddress": Cookie.get('redirectURL') ? Cookie.get('redirectURL') : "https://kavishdoshi.com"
         }
