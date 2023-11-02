@@ -64,7 +64,7 @@ const NavBar = () => {
                 <motion.a href="https://twitter.com" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mr-3'>
                     <TwitterIcon /> 
                 </motion.a>
-                <motion.a href="https://github.com/Sherlockof96" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mx-3'>
+                <motion.a href="https://github.com/kavishdoshi" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mx-3'>
                     <GithubIcon /> 
                 </motion.a>
                 <motion.a href="https://www.linkedin.com/in/kavishdoshi/" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mx-3'>
@@ -97,7 +97,7 @@ const NavBar = () => {
                         <motion.a href="https://twitter.com" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mr-3 sm:mx-1'>
                             <TwitterIcon /> 
                         </motion.a>
-                        <motion.a href="https://github.com/Sherlockof96" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mx-3 sm:mx-1 bg-light rounded-full dark:bg-dark'>
+                        <motion.a href="https://github.com/kavishdoshi" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mx-3 sm:mx-1 bg-light rounded-full dark:bg-dark'>
                             <GithubIcon /> 
                         </motion.a>
                         <motion.a href="https://www.linkedin.com/in/kavishdoshi/" target={"_blank"} whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mx-3 sm:mx-1'>
